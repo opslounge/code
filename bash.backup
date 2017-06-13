@@ -1,0 +1,118 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+#export PS1="\u\h\[\e[32;40m\]\w\[\e[m\] "
+PS1="\[\033[0;37m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200\")[$(if [[ ${EUID} == 0 ]]; then echo '\[\033[0;31m\]\h'; else echo '\[\033[0;33m\]\u\[\033[0;37m\]@\[\033[0;96m\]\h'; fi)\[\033[0;37m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]"
+
+echo "ANDY!!! what have you done out of your comfort zone this week????"
+
+#ihd stuff
+alias ihd="ssh u88170166@home667860241.1and1-data.host"
+
+
+#puretec environment devices
+alias fla="ssh aparsons@flashtest"
+alias ntp="ssh aparsons@prod-ntp1"
+alias caa="ssh aparsons:serial@10.21.94.50"
+
+alias cba="ssh aparsons:serial@10.21.94.56"
+alias cbb="ssh aparsons:serial@10.21.94.51"
+alias cca="ssh aparsons:serial@10.21.94.57"
+alias ccb="ssh aparsons:serial@10.21.94.52"
+alias cdb="ssh aparsons:serial@10.21.94.53"
+alias cea="ssh aparsons:serial@10.21.94.59"
+alias ceb="ssh aparsons:serial@10.21.94.54"
+alias cda="ssh aparsons:serial@10.21.94.58"
+alias back="ssh aparsons@prod-backup01"
+alias ans="ssh ansible@prod-ans01"
+alias weather="ssh aparsons@prod-weather01"
+alias ztp="ssh aparsons@prod-ztp01"
+
+#core-distro networking
+alias corea="ssh aparsons@10.21.94.2"
+alias coreb="ssh aparsons@10.21.94.3"
+alias d1="ssh aparsons@10.21.94.10"
+alias d2="ssh aparsons@10.21.94.11"
+alias d3="ssh aparsons@10.21.94.12"
+alias d4="ssh aparsons@10.21.94.13"
+alias d5="ssh aparsons@10.21.94.14"
+alias d6="ssh aparsons@10.21.94.15"
+alias d7="ssh aparsons@10.21.94.16"
+alias d8="ssh aparsons@10.21.94.17"
+alias d9="ssh aparsons@10.21.94.18"
+alias d10="ssh aparsons@10.21.94.19"
+
+
+
+
+
+
+#jump to the storage arrays
+alias bfs="ssh pureuser@cloud-demo-bfs-fa320-1.puretec.purestorage.com"
+alias fbs="ssh pureuser@10.21.94.126"
+#this is the jump host
+alias nfs="ssh aparsons@prod-nfs01"
+alias px3="ssh @aparsons@puretec.purestorage.com@10.21.93.15"
+alias pxe="ssh @aparsons@puretec.purestorage.com@10.21.93.13"
+alias jump="ssh aparsons@puretec.purestorage.com@10.21.93.24"
+alias jump6="ssh aparsons@puretec.purestorage.com@2620:125:9004:2093::24"
+alias 5ka="ssh aparsons@10.21.23.91"
+alias 5kb="ssh aparsons@10.21.23.92"
+alias fuse="ssh aparsons@fuse"
+alias ca="ssh admin@cloud-san-b07-15.puretec.purestorage.com"
+alias cb="ssh admin@cloud-san-b07-17.puretec.purestorage.com"
+alias sta="ssh aparsons@prod-stack01"
+
+
+#output screen for doing console work
+alias screen="screen /dev/tty.USA19H142P1.1"
+
+#shortcuts to make it easier on you
+alias fix="vi ~/.bashrc"
+alias huh="cat ~/.bashrc"
+alias src="source ~/.bashrc"
+
+#chef environ
+alias cook="ssh root@chef-server04"
+alias prep="ssh root@chef-wks02"
+#fog enviro
+alias fog="ssh fog-server01"
+
+#demo stuff
+#demo fabric a
+alias da="ssh sn1-mds-b07-18"
+#demo fabric b
+alias db="ssh sn1-mds-b07-16"
+#demo fabric a-08
+alias db1="ssh 10.21.96.67"
+#demo fabric b-08
+alias db2="ssh 10.21.96.68"
+
+
+#cloud related ssh stuff
+#ssh to switches in rack b10 a and b
+alias c1b="ssh 10.21.94.120"
+alias c1a="ssh 10.21.94.121"
+#ssh to switches in rack b11 a and b
+alias c2b="ssh 10.21.94.109"
+alias c2a="ssh 10.21.94.110"
+#jean luke healthcare switchs
+alias hela="ssh 10.21.11.70"
+alias helb="ssh 10.21.11.71"
+alias code="cd /home/aparsons@PureTec.purestorage.com/git/it_scripts"
+#lab flashblade fabric in rack b01
+alias fba="ssh sn1-mds-b01-24"
+alias fbb="ssh sn1-mds-b01-26"
+
+#dev fiber switchs
+alias dva="ssh 10.21.94.43"
+alias dvb="ssh 10.21.94.42"
